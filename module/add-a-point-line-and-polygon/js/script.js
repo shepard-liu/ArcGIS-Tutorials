@@ -86,9 +86,8 @@ require(moduleNames, function (
     //define a popupTemplate for polygon
     //code a html snippet for the popup content
     let popupHTML =
-        "<p style=\"color:red\">This is a tutorial.</p>" +
-        "<div style=\"background-color:gray;color:white\">The featureID of this polygon is: {featureID}</div>" +
-        "<div>The description of this polygon is: {description}</div>";
+        "<span style=\"font-weight:bold\">Haoyu Liu</span><span> marked 2 hours ago</span>" +
+        "<div>Notes:</div>" + "<div style=\"color:white;background-color:gray\">{description}</div>";
 
     //The popupTemplate replaces "{...}" with property value of attributes.
     //html is well supported. 
@@ -120,13 +119,11 @@ require(moduleNames, function (
 
         attributes: {
             featureID: "p-osfn287d",
-            description: "a polygon"
+            description: "I'm moving to this area.<br>Lots of people. Good spot to investigate."
         },
 
         popupTemplate: polygonPopupTemplate,
     });
-
-
 
     //add the graphic object to the layer
     graphicsLayer.add(pointGraphic);
