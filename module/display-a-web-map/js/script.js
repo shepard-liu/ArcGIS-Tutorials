@@ -28,4 +28,18 @@ require(moduleNames, function (
         map: webmap,
         container: "viewDiv" // Div element
     });
+
+    const scaleBar = new ScaleBar({
+        view: view
+    });
+
+    view.ui.add(scaleBar, 'bottom-left');
+
+    const legend = new Legend({
+        view: view
+    });
+
+    view.ui.add(legend, 'top-right');
+
+
 })
